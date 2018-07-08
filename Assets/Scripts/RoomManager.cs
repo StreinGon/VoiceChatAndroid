@@ -9,6 +9,7 @@ public class RoomManager : Photon.MonoBehaviour {
     private string text;
     public Button back;
 	public Button mute;
+
     // Use this for initialization
     void Start () {
         PhotonNetwork.ConnectUsingSettings("1.0");
@@ -50,6 +51,7 @@ public class RoomManager : Photon.MonoBehaviour {
 		}
 	
 	}
+
     void OnJoinedLobby()
     {
     }

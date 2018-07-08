@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 namespace ExitGames.Demos.DemoPunVoice
 {
 	using Client.Photon.LoadBalancing;
 
 
 	public class pushtotalk : Photon.MonoBehaviour {
+
 		private PhotonVoiceRecorder rec;
         private void Awake()
         {
@@ -16,6 +18,7 @@ namespace ExitGames.Demos.DemoPunVoice
         void Start () {
 			rec = GetComponent<PhotonVoiceRecorder> ();
 			rec.Transmit = false;
+
 		}
 		
 		// Update is called once per frame
@@ -28,5 +31,6 @@ namespace ExitGames.Demos.DemoPunVoice
 				rec.Transmit = false;
 			}
 		}
+
 	}
 }
